@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "flowkit"
+name = "flowround"
 version = "0.0.1"
 description = "Lossless parse and serialize for a Mermaid flowchart subset."
 readme = "README.md"

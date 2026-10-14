@@ -2,7 +2,7 @@
 
 Companion code for *Discipline for Coding Agents* by Ranjan Kumar.
 
-The book's running example is **flowkit**, a Python library that parses, edits, and serializes
+The book's running example is **flowround**, a Python library that parses, edits, and serializes
 Mermaid flowcharts under a byte-for-byte round-trip invariant:
 
     serialize(parse(x)) == x

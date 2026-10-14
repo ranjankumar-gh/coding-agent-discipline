@@ -1,4 +1,4 @@
-"""Lossless line model for the flowkit subset.
+"""Lossless line model for the flowround subset.
 
 Ship 0: parse and serialize only. Every input string round-trips byte for byte:
 ``parse(x).serialize() == x``. Each line keeps its exact text and its exact line

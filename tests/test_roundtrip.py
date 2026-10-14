@@ -4,7 +4,7 @@ import random
 
 import pytest
 
-from flowkit import parse
+from flowround import parse
 
 SAMPLE = (
     "flowchart TD\n"

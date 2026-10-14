@@ -1,8 +1,8 @@
-# flowkit specification
+# flowround specification
 
 ## Purpose
 
-flowkit parses, edits, and serializes a subset of Mermaid flowchart syntax. Its one
+flowround parses, edits, and serializes a subset of Mermaid flowchart syntax. Its one
 non-negotiable property is the round-trip invariant:
 
     serialize(parse(x)) == x        for every input string x
@@ -48,5 +48,5 @@ unchanged.
 The obvious edit is a regex replacement over the whole text, such as replacing `A\[` with
 `X[` everywhere. It changes bytes the user did not mean to touch: the same pattern inside a
 comment, inside a label, or across a `\r\n` boundary. The round-trip check fails on those edits
-even when the intended change looks right. flowkit forbids whole-text splicing: every edit goes
+even when the intended change looks right. flowround forbids whole-text splicing: every edit goes
 through the line model, which owns each line's exact bytes.
