@@ -1,0 +1,6 @@
+#!/bin/sh
+# No tool attribution in commit messages (book rule 0).
+if grep -qiE '^(Co.Authored.By: *Claude|Claude.Session:)|Generated.with|claude\.ai/code/session|noreply.anthropic' "$1"; then
+  echo "commit rejected: tool attribution in commit message" >&2
+  exit 1
+fi
