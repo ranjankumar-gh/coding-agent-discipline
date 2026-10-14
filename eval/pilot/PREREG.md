@@ -19,8 +19,8 @@ brief without the pack?
 - Five repetitions per task per arm: 5 × 5 × 2 = **50 sessions**.
 - Runs are interleaved across arms and tasks, so no arm runs as a block.
 - Each session gets a fresh workspace: a clean `git archive` of this repository's HEAD at the time
-  of the run, with `skills/` and `eval/` removed for the without arm and an otherwise identical
-  tree for the with arm. Workspaces are not reused across sessions.
+  of the run. Both arms have `eval/` removed. The without arm also has `skills/` removed, so the
+  with arm differs only by the pack. Workspaces are not reused across sessions.
 - Each session is a fresh general-purpose subagent with the same default model. The brief is
   pasted into the prompt. The prompt does not mention the arm.
 
