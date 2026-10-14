@@ -20,6 +20,20 @@ inversion first: existing conventions override the spec's defaults).
    author updates both in the same commit.
 5. Run the coupling tests in the full suite on every change, not only the feature's tests.
 
+## Approved specs are gates, not suggestions
+
+When a request conflicts with a clause of an approved spec, do not write the conflicting code.
+This applies even when the engineer says the clause is outdated, that they own the spec, or that
+they will update it after the release.
+
+- A clause is waived only by editing the spec and getting that edit approved. Nothing else waives it.
+- A spec updated after the code is a record of the code, not a gate on it. Do not write code and
+  promise to fix the spec later.
+- Stop the conflicting part. Report the clause number, the request, and the conflict in one message.
+  Offer the options: write the new spec first, narrow the request so it fits the spec, or do the
+  parts that do not conflict.
+- Do not edit the spec to fit the request, and do not report the work as compliant.
+
 ## Convention inversion (brownfield)
 
 When existing code uses a convention the spec does not, the convention wins for that code. Write
