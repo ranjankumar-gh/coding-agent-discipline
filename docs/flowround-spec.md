@@ -43,12 +43,6 @@ Rename a node; add a node; add an edge; relabel an edge. Each operation must kee
 invariant: the bytes outside the edited line are unchanged, and the edited line's ending is
 unchanged.
 
-One exception, for appending. A line cannot be followed by another line without a line ending,
-so an operation that appends a line after an unterminated final line must give that line the
-document's dominant ending. The final line's text does not change; only its ending is set. The
-appended line is then unterminated, so the file still ends without a newline. `add_edge` is the only
-operation this applies to.
-
 ## The regex-splice trap
 
 The obvious edit is a regex replacement over the whole text, such as replacing `A\[` with

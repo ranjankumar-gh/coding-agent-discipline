@@ -73,3 +73,23 @@ spec's "bytes outside the edited line are unchanged" rule now carries one stated
 append after an unterminated final line gives that line the dominant ending, and `add_edge` is the
 only operation this applies to. The brief's rule 3 is the intended behaviour. The recorded failure
 above is kept as it happened. The pilot's hidden tests are unchanged, and the pilot is not re-run.
+
+## Second resolution (2026-10-15): the brief was narrowed, not the spec
+
+The spec exception above was withdrawn. `docs/flowround-spec.md` again says that edits leave all
+bytes outside the edited line unchanged. The T2 brief (brief v2) now says that an edge added after an
+unterminated final line, or after an unterminated header with no edges, raises `ValueError`. The
+hidden tests changed to match. The reference implementation passes all eight v2 tests.
+
+This is a change to the task after the pilot ran, so it is recorded as a deviation from the
+pre-registration. The official result above stays as graded under brief v1 (49 of 50). For
+information, the same 50 workspaces, regraded under brief v2 on T2 only:
+
+| arm | T2 under v2 | total under v2 |
+|---|---|---|
+| with the skill pack | 1 of 5 (only r3, which refused) | 21 of 25 (84%) |
+| without the skill pack | 0 of 5 | 20 of 25 (80%) |
+
+Under v2, nine of ten T2 sessions implemented the append that v2 forbids. Only the session that
+refused passes. This is not a new pilot and carries no statistical weight. A v2 pilot would need its
+own pre-registration, and the book must not present the v1 and v2 numbers as one result.
