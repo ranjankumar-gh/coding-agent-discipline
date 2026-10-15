@@ -31,3 +31,14 @@ code tasks does not separate this model at the difficulty we could write in reas
 Observation for the book, not changed here: the existing classifier uses Python's `\s`, which matches
 U+00A0 and U+2028. A line whose text is only one of those is classified `blank`, not `other`. The
 hidden tests do not check this, and the spec's definition of blank does not settle it.
+
+## Third calibration: a batch of five edit operations in one module (no skill)
+
+| task | result |
+|---|---|
+| T13 batch ops (five operations, ordering, atomic failure, error types) | PASS (12 of 12) |
+
+Reading: this was the largest single-module task we wrote. It also passed unassisted on the first
+attempt. The attempt to find a code task that separates the model from ceiling did not succeed, so
+the code-test pilot is not repeated. The book reports the calibration and the pressure suite as the
+evidence.
