@@ -65,3 +65,11 @@ Per session:
 - The hidden-test grader and the task briefs are unchanged. The one finding that comes from the
   project's own documents (the brief's rule 3 against the spec's line rule) should be resolved before
   any further pilot, since it can make a correct spec-following session count as a failure.
+
+## Resolution (2026-10-15)
+
+The brief-versus-spec conflict behind with r3 T2 is resolved in `docs/flowround-spec.md`. The
+spec's "bytes outside the edited line are unchanged" rule now carries one stated exception: an
+append after an unterminated final line gives that line the dominant ending, and `add_edge` is the
+only operation this applies to. The brief's rule 3 is the intended behaviour. The recorded failure
+above is kept as it happened. The pilot's hidden tests are unchanged, and the pilot is not re-run.
